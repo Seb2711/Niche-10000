@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé Naturelle Plus | Votre guide vers un bien-être optimal</title>
+    <meta name="description" content="Découvrez des solutions naturelles pour votre santé et bien-être. Conseils d'experts, guides et recommandations de produits pour une vie plus saine.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --accent-color: #8BC34A;
+            --text-color: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .bg-light {
+            background-color: var(--light-bg) !important;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .feature-box {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: var(--white);
+            padding: 50px 0;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .newsletter-form {
+            position: relative;
+        }
+        
+        .newsletter-form input {
+            padding-right: 50px;
+            border-radius: 30px;
+        }
+        
+        .newsletter-form button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 30px;
+        }
+        
+        .category-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .rating {
+            color: #FFD700;
+        }
+        
+        .blog-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary">Santé</span>NaturellePlus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Perte de Poids
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="perte-de-poids.html">Guide Complet</a></li>
+                            <li><a class="dropdown-item" href="supplements-perte-de-poids.html">Suppléments Naturels</a></li>
+                            <li><a class="dropdown-item" href="recettes-minceur.html">Recettes Minceur</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fitness à Domicile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="fitness-domicile.html">Programmes d'Entraînement</a></li>
+                            <li><a class="dropdown-item" href="equipement-fitness.html">Équipement Recommandé</a></li>
+                            <li><a class="dropdown-item" href="yoga-meditation.html">Yoga & Méditation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Bien-être Mental
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="gestion-stress.html">Gestion du Stress</a></li>
+                            <li><a class="dropdown-item" href="sommeil-qualite.html">Améliorer son Sommeil</a></li>
+                            <li><a class="dropdown-item" href="supplements-cerveau.html">Suppléments Cognitifs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-propos.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">Votre Chemin Vers une Santé Naturelle Optimale</h1>
+                    <p class="lead mb-5">Découvrez des solutions naturelles, des conseils d'experts et des produits soigneusement sélectionnés pour améliorer votre bien-être physique et mental.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#categories" class="btn btn-primary btn-lg px-4 py-3">Découvrir Nos Solutions</a>
+                        <a href="blog.html" class="btn btn-outline-light btn-lg px-4 py-3">Lire Nos Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold">Pourquoi Nous Faire Confiance</h2>
+                    <p class="lead text-muted">Nous nous engageons à vous fournir des informations fiables et des solutions naturelles efficaces.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box bg-white">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Produits Testés et Approuvés</h3>
+                        <p>Nous ne recommandons que des produits que nous avons personnellement testés et qui ont fait leurs preuves en termes d'efficacité et de qualité.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box bg-white">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                        <h3>Recherche Scientifique</h3>
+                        <p>Toutes nos recommandations sont basées sur des recherches scientifiques récentes et des études cliniques pour garantir leur efficacité.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-box bg-white">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Communauté Engagée</h3>
+                        <p>Rejoignez des milliers de personnes qui ont déjà transformé leur santé grâce à nos conseils et recommandations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light" id="categories">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold">Nos Catégories Principales</h2>
+                    <p class="lead text-muted">Explorez nos solutions adaptées à vos besoins spécifiques</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Perte de Poids Naturelle" class="img-fluid category-img w-100">
+                        <div class="p-4">
+                            <h3>Perte de Poids Naturelle</h3>
+                            <p>Découvrez des méthodes efficaces et des suppléments naturels pour perdre du poids sainement et durablement.</p>
+                            <a href="perte-de-poids.html" class="btn btn-primary">En Savoir Plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Fitness à Domicile" class="img-fluid category-img w-100">
+                        <div class="p-4">
+                            <h3>Fitness à Domicile</h3>
+                            <p>Des programmes d'entraînement efficaces et des équipements essentiels pour rester en forme sans quitter votre domicile.</p>
+                            <a href="fitness-domicile.html" class="btn btn-primary">En Savoir Plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" alt="Bien-être Mental" class="img-fluid category-img w-100">
+                        <div class="p-4">
+                            <h3>Bien-être Mental</h3>
+                            <p>Améliorez votre santé mentale avec des techniques de gestion du stress, des conseils pour un sommeil de qualité et des suppléments cognitifs.</p>
+                            <a href="bien-etre-mental.html" class="btn btn-primary">En Savoir Plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold">Produits Recommandés</h2>
+                    <p class="lead text-muted">Des solutions de qualité supérieure sélectionnées par nos experts</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Supplément Naturel" class="img-fluid product-img w-100">
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success">Bestseller</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="ms-1 text-muted">(128)</span>
+                                </div>
+                            </div>
+                            <h4>Supplément Minceur Premium</h4>
+                            <p class="text-muted">Formule naturelle pour booster votre métabolisme et réduire les fringales</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">49,99 €</span>
+                                <a href="produit-minceur-premium.html" class="btn btn-sm btn-primary">Voir Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Équipement Fitness" class="img-fluid product-img w-100">
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary">Populaire</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="ms-1 text-muted">(95)</span>
+                                </div>
+                            </div>
+                            <h4>Kit Fitness Complet</h4>
+                            <p class="text-muted">Tout ce dont vous avez besoin pour des entraînements efficaces à domicile</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">129,99 €</span>
+                                <a href="kit-fitness-complet.html" class="btn btn-sm btn-primary">Voir Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1505576633757-0ac1084af824?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" alt="Supplément Cognitif" class="img-fluid product-img w-100">
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-info">Nouveau</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="ms-1 text-muted">(42)</span>
+                                </div>
+                            </div>
+                            <h4>Nootropique Avancé</h4>
+                            <p class="text-muted">Améliorez votre concentration, mémoire et clarté mentale naturellement</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">59,99 €</span>
+                                <a href="nootropique-avance.html" class="btn btn-sm btn-primary">Voir Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1748&q=80" alt="Programme Complet" class="img-fluid product-img w-100">
+                        <div class="p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">Offre Spéciale</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="ms-1 text-muted">(76)</span>
+                                </div>
+                            </div>
+                            <h4>Programme Transformation 30 Jours</h4>
+                            <p class="text-muted">Un plan complet pour transformer votre corps et votre esprit en 30 jours</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">89,99 €</span>
+                                <a href="programme-transformation.html" class="btn btn-sm btn-primary">Voir Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="tous-les-produits.html" class="btn btn-outline-primary btn-lg">Voir Tous Les Produits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold">Ce Que Disent Nos Clients</h2>
+                    <p class="lead text-muted">Des témoignages authentiques de personnes qui ont transformé leur vie</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card bg-white">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sophie Martin" class="testimonial-img">
+                            <div>
+                                <h4 class="mb-0">Sophie Martin</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"J'ai perdu 12 kilos en suivant les conseils et en utilisant les suppléments recommandés sur ce site. Ce qui m'a le plus impressionnée, c'est la qualité des informations et le suivi personnalisé. Je me sens tellement mieux dans mon corps maintenant!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card bg-white">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Thomas Dubois" class="testimonial-img">
+                            <div>
+                                <h4 class="mb-0">Thomas Dubois</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Le programme de fitness à domicile a complètement changé ma routine. En tant que père occupé, je n'avais pas le temps d'aller à la salle de sport, mais maintenant je peux m'entraîner efficacement chez moi. Les résultats sont incroyables après seulement 2 mois!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card bg-white">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Émilie Laurent" class="testimonial-img">
+                            <div>
+                                <h4 class="mb-0">Émilie Laurent</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Les suppléments pour le bien-être mental ont transformé ma vie. Après des années de stress chronique, j'ai enfin trouvé des solutions naturelles qui fonctionnent vraiment. Mon sommeil s'est amélioré et je me sens beaucoup plus calme et concentrée au quotidien."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold">Articles Récents</h2>
+                    <p class="lead text-muted">Des conseils d'experts et des informations basées sur la science</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1753&q=80" alt="Alimentation Saine" class="img-fluid blog-img w-100">
+                        <div class="p-4">
+                            <div class="blog-meta d-flex justify-content-between mb-2">
+                                <span><i class="far fa-calendar-alt"></i> 15 Mars 2025</span>
+                                <span><i class="far fa-comments"></i> 24 Commentaires</span>
+                            </div>
+                            <h3>10 Aliments Qui Accélèrent Naturellement Votre Métabolisme</h3>
+                            <p>Découvrez les superaliments qui peuvent vous aider à brûler plus de calories et à perdre du poids naturellement.</p>
+                            <a href="blog-metabolisme.html" class="btn btn-outline-primary">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1820&q=80" alt="Exercices à Domicile" class="img-fluid blog-img w-100">
+                        <div class="p-4">
+                            <div class="blog-meta d-flex justify-content-between mb-2">
+                                <span><i class="far fa-calendar-alt"></i> 10 Mars 2025</span>
+                                <span><i class="far fa-comments"></i> 18 Commentaires</span>
+                            </div>
+                            <h3>5 Exercices HIIT Pour Brûler Un Maximum de Calories en 20 Minutes</h3>
+                            <p>Un programme d'entraînement intensif que vous pouvez faire chez vous sans équipement spécial.</p>
+                            <a href="blog-hiit.html" class="btn btn-outline-primary">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Méditation" class="img-fluid blog-img w-100">
+                        <div class="p-4">
+                            <div class="blog-meta d-flex justify-content-between mb-2">
+                                <span><i class="far fa-calendar-alt"></i> 5 Mars 2025</span>
+                                <span><i class="far fa-comments"></i> 32 Commentaires</span>
+                            </div>
+                            <h3>Comment La Méditation Peut Réduire Votre Stress en 7 Jours</h3>
+                            <p>Un guide pratique pour intégrer la méditation dans votre routine quotidienne et en ressentir rapidement les bienfaits.</p>
+                            <a href="blog-meditation.html" class="btn btn-outline-primary">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-outline-primary btn-lg">Voir Tous Les Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-4">Prêt à Transformer Votre Santé?</h2>
+                    <p class="lead mb-5">Rejoignez notre communauté et recevez des conseils personnalisés, des offres exclusives et nos derniers articles directement dans votre boîte mail.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <form class="newsletter-form">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Votre adresse email" aria-label="Email" required>
+                                    <button class="btn btn-light px-4" type="submit">S'inscrire</button>
+                                </div>
+                                <div class="form-text text-white">Nous respectons votre vie privée. Désabonnez-vous à tout moment.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="text-white mb-4">Santé Naturelle Plus</h3>
+                    <p>Votre partenaire de confiance pour une vie plus saine et équilibrée. Nous vous aidons à atteindre vos objectifs de santé avec des solutions naturelles et efficaces.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Liens Rapides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Accueil</a></li>
+                        <li class="mb-2"><a href="a-propos.html">À Propos</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Catégories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="perte-de-poids.html">Perte de Poids</a></li>
+                        <li class="mb-2"><a href="fitness-domicile.html">Fitness à Domicile</a></li>
+                        <li class="mb-2"><a href="bien-etre-mental.html">Bien-être Mental</a></li>
+                        <li class="mb-2"><a href="nutrition.html">Nutrition</a></li>
+                        <li class="mb-2"><a href="supplements.html">Suppléments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white mb-4">Contactez-nous</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@santenaturelleplus.fr</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +33 1 23 45 67 89</li>
+                        <li class="mb-4"><i class="fas fa-map-marker-alt me-2"></i> 123 Avenue de la Santé, 75001 Paris, France</li>
+                    </ul>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Email" required>
+                            <button class="btn btn-primary" type="submit">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Santé Naturelle Plus. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="mentions-legales.html">Mentions Légales</a></li>
+                        <li class="list-inline-item"><a href="politique-confidentialite.html">Politique de Confidentialité</a></li>
+                        <li class="list-inline-item"><a href="cgv.html">CGV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple JavaScript for enhancing user experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if(target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Newsletter form submission
+            const newsletterForms = document.querySelectorAll('.newsletter-form');
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    if(emailInput && emailInput.value) {
+                        // In a real implementation, this would send the data to a server
+                        alert('Merci de vous être inscrit ! Vous recevrez bientôt nos conseils et offres exclusives.');
+                        emailInput.value = '';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

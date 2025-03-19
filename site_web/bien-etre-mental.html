@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bien-être Mental - Santé Naturelle Plus</title>
+    <meta name="description" content="Découvrez les meilleures solutions pour améliorer votre bien-être mental et réduire le stress. Produits naturels et programmes recommandés par des experts.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary">Santé</span> Naturelle Plus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Catégories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perte-de-poids.html">Perte de Poids</a></li>
+                            <li><a class="dropdown-item" href="fitness.html">Fitness à Domicile</a></li>
+                            <li><a class="dropdown-item active" href="bien-etre-mental.html">Bien-être Mental</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-propos.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de catégorie -->
+    <header class="category-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Bien-être Mental</h1>
+            <p class="lead">Des solutions naturelles pour réduire le stress, améliorer votre sommeil et retrouver l'équilibre émotionnel</p>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Barre latérale de filtres -->
+                <div class="col-lg-3">
+                    <div class="filter-sidebar">
+                        <h4 class="filter-title">Filtres</h4>
+                        
+                        <div class="filter-group">
+                            <h5>Type de produit</h5>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-supplements" checked>
+                                <label for="type-supplements">Suppléments</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-programs" checked>
+                                <label for="type-programs">Programmes</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-apps" checked>
+                                <label for="type-apps">Applications</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Bénéfice principal</h5>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="benefit-stress" checked>
+                                <label for="benefit-stress">Anti-stress</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="benefit-sleep" checked>
+                                <label for="benefit-sleep">Sommeil</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="benefit-focus" checked>
+                                <label for="benefit-focus">Concentration</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="benefit-mood" checked>
+                                <label for="benefit-mood">Humeur</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Gamme de prix</h5>
+                            <input type="range" class="form-range price-slider" min="0" max="200" value="200" id="price-range">
+                            <div class="d-flex justify-content-between">
+                                <span>0€</span>
+                                <span id="price-value">200€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Note minimale</h5>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-4" checked>
+                                <label for="rating-4">4★ et plus</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-3">
+                                <label for="rating-3">3★ et plus</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-all">
+                                <label for="rating-all">Tous les produits</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Trier par</h5>
+                            <select class="sort-select" id="sort-products">
+                                <option value="popularity">Popularité</option>
+                                <option value="rating">Meilleures notes</option>
+                                <option value="price-asc">Prix croissant</option>
+                                <option value="price-desc">Prix décroissant</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-primary w-100 mt-3">Appliquer les filtres</button>
+                    </div>
+                </div>
+                
+                <!-- Liste des produits -->
+                <div class="col-lg-9">
+                    <div class="mb-4">
+                        <h2>Les meilleures solutions pour votre bien-être mental</h2>
+                        <p>Découvrez notre sélection de produits et programmes soigneusement évalués pour vous aider à réduire le stress, améliorer votre sommeil et retrouver l'équilibre émotionnel.</p>
+                    </div>
+                    
+                    <div class="row products-container">
+                        <!-- Produit 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="supplements" data-price="59.99" data-rating="4.8" data-date="2025-02-15">
+                                <img src="https://via.placeholder.com/300x200?text=ZenMind" class="card-img-top product-img" alt="ZenMind Complex">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-success">Bestseller</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.8/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">ZenMind Complex</h5>
+                                    <p class="card-text">Supplément naturel à base d'ashwagandha, rhodiola et magnésium pour réduire le stress et l'anxiété.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">59,99 €</span>
+                                        <a href="https://example.com/affiliate/zenmind" class="btn btn-primary btn-affiliate" data-product-id="ZM001" data-product-name="ZenMind Complex" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="supplements" data-price="44.99" data-rating="4.7" data-date="2025-01-20">
+                                <img src="https://via.placeholder.com/300x200?text=SleepWell" class="card-img-top product-img" alt="SleepWell Premium">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-danger">Promo -25%</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.7/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">SleepWell Premium</h5>
+                                    <p class="card-text">Formule avancée à base de mélatonine, valériane et L-théanine pour un sommeil profond et réparateur.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="product-old-price">59,99 €</span>
+                                            <span class="product-price">44,99 €</span>
+                                        </div>
+                                        <a href="https://example.com/affiliate/sleepwell" class="btn btn-primary btn-affiliate" data-product-id="SW002" data-product-name="SleepWell Premium" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="programs" data-price="129.00" data-rating="4.9" data-date="2025-03-01">
+                                <img src="https://via.placeholder.com/300x200?text=MindfulLife" class="card-img-top product-img" alt="Programme MindfulLife">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary">Top ventes</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.9/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Programme MindfulLife</h5>
+                                    <p class="card-text">Programme complet de 8 semaines de méditation et pleine conscience guidé par des experts en neurosciences.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">129,00 €</span>
+                                        <a href="https://example.com/affiliate/mindfullife" class="btn btn-primary btn-affiliate" data-product-id="ML003" data-product-name="Programme MindfulLife" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="apps" data-price="79.99" data-rating="4.6" data-date="2025-02-10">
+                                <img src="https://via.placeholder.com/300x200?text=CalmMind" class="card-img-top product-img" alt="CalmMind Pro">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-info">Nouveau</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.6/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">CalmMind Pro</h5>
+                                    <p class="card-text">Application premium avec plus de 500 méditations guidées, sons binauraux et suivi de progression personnalisé.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">79,99 €</span>
+                                        <a href="https://example.com/affiliate/calmmind" class="btn btn-primary btn-affiliate" data-product-id="CM004" data-product-name="CalmMind Pro" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="supplements" data-price="69.99" data-rating="4.5" data-date="2025-01-15">
+                                <img src="https://via.placeholder.com/300x200?text=BrainBoost" class="card-img-top product-img" alt="BrainBoost Advanced">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary">Populaire</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.5/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">BrainBoost Advanced</h5>
+                                    <p class="card-text">Nootropique naturel pour améliorer la concentration, la mémoire et les performances cognitives.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">69,99 €</span>
+                                        <a href="https://example.com/affiliate/brainboost" class="btn btn-primary btn-affiliate" data-product-id="BB005" data-product-name="BrainBoost Advanced" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="programs" data-price="149.00" data-rating="4.8" data-date="2025-02-25">
+                                <img src="https://via.placeholder.com/300x200?text=StressReset" class="card-img-top product-img" alt="StressReset 21 Jours">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-warning text-dark">Offre limitée</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.8/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">StressReset 21 Jours</h5>
+                                    <p class="card-text">Programme intensif de 21 jours pour réduire le stress chronique et retrouver l'équilibre émotionnel.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">149,00 €</span>
+                                        <a href="https://example.com/affiliate/stressreset" class="btn btn-primary btn-affiliate" data-product-id="SR006" data-product-name="StressReset 21 Jours" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Pagination des produits">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Suivant">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section d'information -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Pourquoi prendre soin de votre bien-être mental ?</h2>
+                    <p class="lead">Le bien-être mental est aussi important que la santé physique. Investir dans votre équilibre émotionnel améliore tous les aspects de votre vie.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Performances cognitives</h4>
+                        <p>Un esprit équilibré améliore la concentration, la mémoire et la créativité, vous permettant d'être plus performant dans toutes vos activités.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Santé physique</h4>
+                        <p>Le stress chronique affecte négativement votre système immunitaire et cardiovasculaire. Réduire le stress améliore votre santé globale.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h4>Relations harmonieuses</h4>
+                        <p>Un meilleur équilibre émotionnel vous aide à entretenir des relations plus saines et épanouissantes avec votre entourage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section témoignages -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Témoignages de nos lecteurs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Claire B.">
+                            <div>
+                                <h5 class="mb-0">Claire B.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Le Programme MindfulLife a complètement transformé ma façon de gérer le stress. Après 8 semaines, mon anxiété a considérablement diminué et je dors beaucoup mieux. Les techniques apprises sont devenues une partie essentielle de ma routine quotidienne."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Nicolas P.">
+                            <div>
+                                <h5 class="mb-0">Nicolas P.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"J'utilise ZenMind Complex depuis 3 mois et les résultats sont impressionnants. En tant que cadre supérieur, mon niveau de stress était insoutenable. Ce supplément m'a aidé à retrouver mon calme et ma clarté mentale sans effets secondaires."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Marie L.">
+                            <div>
+                                <h5 class="mb-0">Marie L.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"SleepWell Premium a résolu mes problèmes d'insomnie chronique. Après des années de lutte pour trouver le sommeil, je dors maintenant 7-8 heures par nuit. Je me réveille reposée et pleine d'énergie, ce qui a amélioré tous les aspects de ma vie."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Questions fréquentes sur le bien-être mental</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Les suppléments pour le bien-être mental sont-ils vraiment efficaces ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Les suppléments naturels pour le bien-être mental peuvent être efficaces, mais leur efficacité varie selon les individus. Des ingrédients comme l'ashwagandha, la rhodiola, le magnésium et la L-théanine ont fait l'objet d'études scientifiques démontrant leurs effets positifs sur la réduction du stress et l'amélioration de l'humeur. Ces suppléments fonctionnent mieux dans le cadre d'une approche globale incluant une alimentation équilibrée, de l'exercice régulier et des techniques de gestion du stress. Il est toujours recommandé de consulter un professionnel de santé avant de commencer tout supplément.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Combien de temps faut-il pour voir des résultats avec la méditation ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Les bienfaits de la méditation peuvent se manifester à différents rythmes selon les individus. Certaines personnes ressentent un calme immédiat après une seule séance, tandis que les changements plus profonds et durables nécessitent généralement une pratique régulière. Des études scientifiques ont montré que 8 semaines de pratique quotidienne (10-20 minutes par jour) peuvent entraîner des changements mesurables dans le cerveau et réduire significativement les niveaux de stress. La clé est la constance : une pratique régulière, même courte, est plus bénéfique que des séances longues mais sporadiques. Les programmes guidés comme MindfulLife sont structurés pour maximiser les résultats dans un délai défini.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Comment choisir le bon produit pour améliorer mon sommeil ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Pour choisir le bon produit pour le sommeil, identifiez d'abord votre problème spécifique : difficulté à s'endormir, réveils nocturnes, ou sommeil non réparateur. Pour les difficultés d'endormissement, recherchez des produits contenant de la mélatonine ou de la valériane. Pour un sommeil plus profond, le magnésium et le GABA peuvent être bénéfiques. Vérifiez la qualité des ingrédients et privilégiez les formules sans additifs artificiels. Commencez par la dose minimale recommandée et ajustez si nécessaire. Combinez toujours les suppléments avec une bonne hygiène de sommeil : horaires réguliers, chambre fraîche et sombre, limitation des écrans avant le coucher. Si vos problèmes de sommeil persistent, consultez un professionnel de santé.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Les applications de méditation peuvent-elles remplacer un cours en personne ?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Les applications de méditation comme CalmMind Pro offrent de nombreux avantages : accessibilité, flexibilité, variété de contenus et coût généralement inférieur aux cours en personne. Elles sont particulièrement efficaces pour les débutants et les personnes ayant des emplois du temps chargés. Cependant, elles ne remplacent pas complètement l'expérience d'un cours en personne. Un instructeur qualifié peut fournir des retours personnalisés, corriger votre posture, et adapter les techniques à vos besoins spécifiques. L'environnement de groupe peut également offrir motivation et soutien. L'idéal est de combiner les deux approches : utiliser une application pour la pratique quotidienne et participer occasionnellement à des cours ou retraites en personne pour approfondir votre pratique.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section CTA -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">Prêt à transformer votre bien-être mental ?</h2>
+            <p class="lead mb-4">Rejoignez des milliers de personnes qui ont retrouvé équilibre et sérénité grâce à nos recommandations.</p>
+            <a href="#" class="btn btn-light btn-lg">Découvrir nos meilleures offres</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Santé Naturelle Plus</h5>
+                    <p>Votre guide de confiance pour une vie saine et naturelle. Nous vous aidons à faire les meilleurs choix pour votre santé et votre bien-être.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Catégories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="perte-de-poids.html">Perte de Poids</a></li>
+                        <li><a href="fitness.html">Fitness à Domicile</a></li>
+                        <li><a href="bien-etre-mental.html">Bien-être Mental</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="a-propos.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+                        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Recevez nos conseils et recommandations directement dans votre boîte mail.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email" required>
+                            <button class="btn btn-primary" type="submit">S'abonner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Santé Naturelle Plus. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Popup Newsletter -->
+    <div class="popup-overlay" id="popup-newsletter">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h4 class="text-center mb-4">Obtenez notre guide gratuit</h4>
+            <p class="text-center">Inscrivez-vous à notre newsletter et recevez gratuitement notre guide "7 Techniques Scientifiquement Prouvées pour Réduire le Stress".</p>
+            <form id="popup-newsletter-form">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Votre email" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Recevoir mon guide gratuit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness à Domicile - Santé Naturelle Plus</title>
+    <meta name="description" content="Découvrez les meilleurs programmes et équipements de fitness à domicile pour rester en forme sans sortir de chez vous. Conseils d'experts et produits recommandés.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary">Santé</span> Naturelle Plus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Catégories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perte-de-poids.html">Perte de Poids</a></li>
+                            <li><a class="dropdown-item active" href="fitness.html">Fitness à Domicile</a></li>
+                            <li><a class="dropdown-item" href="bien-etre-mental.html">Bien-être Mental</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-propos.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de catégorie -->
+    <header class="category-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Fitness à Domicile</h1>
+            <p class="lead">Restez en forme sans sortir de chez vous avec nos solutions de fitness adaptées à tous les niveaux</p>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Barre latérale de filtres -->
+                <div class="col-lg-3">
+                    <div class="filter-sidebar">
+                        <h4 class="filter-title">Filtres</h4>
+                        
+                        <div class="filter-group">
+                            <h5>Type de produit</h5>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-programs" checked>
+                                <label for="type-programs">Programmes</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-equipment" checked>
+                                <label for="type-equipment">Équipement</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="type-accessories" checked>
+                                <label for="type-accessories">Accessoires</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Niveau</h5>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="level-beginner" checked>
+                                <label for="level-beginner">Débutant</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="level-intermediate" checked>
+                                <label for="level-intermediate">Intermédiaire</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="level-advanced" checked>
+                                <label for="level-advanced">Avancé</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Gamme de prix</h5>
+                            <input type="range" class="form-range price-slider" min="0" max="300" value="300" id="price-range">
+                            <div class="d-flex justify-content-between">
+                                <span>0€</span>
+                                <span id="price-value">300€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Note minimale</h5>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-4" checked>
+                                <label for="rating-4">4★ et plus</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-3">
+                                <label for="rating-3">3★ et plus</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="radio" name="rating" id="rating-all">
+                                <label for="rating-all">Tous les produits</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Trier par</h5>
+                            <select class="sort-select" id="sort-products">
+                                <option value="popularity">Popularité</option>
+                                <option value="rating">Meilleures notes</option>
+                                <option value="price-asc">Prix croissant</option>
+                                <option value="price-desc">Prix décroissant</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-primary w-100 mt-3">Appliquer les filtres</button>
+                    </div>
+                </div>
+                
+                <!-- Liste des produits -->
+                <div class="col-lg-9">
+                    <div class="mb-4">
+                        <h2>Les meilleurs produits pour le fitness à domicile</h2>
+                        <p>Découvrez notre sélection de programmes et d'équipements soigneusement évalués pour vous aider à rester en forme sans quitter votre domicile.</p>
+                    </div>
+                    
+                    <div class="row products-container">
+                        <!-- Produit 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="programs" data-price="129.99" data-rating="4.9" data-date="2025-02-10">
+                                <img src="https://via.placeholder.com/300x200?text=HomeFit" class="card-img-top product-img" alt="HomeFit Revolution">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-success">Bestseller</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.9/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">HomeFit Revolution</h5>
+                                    <p class="card-text">Programme complet de fitness à domicile avec plus de 200 exercices et plans nutritionnels.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">129,99 €</span>
+                                        <a href="https://example.com/affiliate/homefit" class="btn btn-primary btn-affiliate" data-product-id="HF001" data-product-name="HomeFit Revolution" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="equipment" data-price="249.99" data-rating="4.7" data-date="2025-01-15">
+                                <img src="https://via.placeholder.com/300x200?text=PowerBands" class="card-img-top product-img" alt="PowerBands Pro Set">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-danger">Promo -15%</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.7/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">PowerBands Pro Set</h5>
+                                    <p class="card-text">Ensemble complet de bandes de résistance professionnelles avec guide d'exercices et accessoires.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="product-old-price">299,99 €</span>
+                                            <span class="product-price">249,99 €</span>
+                                        </div>
+                                        <a href="https://example.com/affiliate/powerbands" class="btn btn-primary btn-affiliate" data-product-id="PB002" data-product-name="PowerBands Pro Set" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="programs" data-price="89.99" data-rating="4.8" data-date="2025-03-01">
+                                <img src="https://via.placeholder.com/300x200?text=YogaFlex" class="card-img-top product-img" alt="YogaFlex Premium">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary">Top ventes</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.8/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">YogaFlex Premium</h5>
+                                    <p class="card-text">Programme de yoga à domicile pour tous niveaux avec séances guidées et techniques de respiration.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">89,99 €</span>
+                                        <a href="https://example.com/affiliate/yogaflex" class="btn btn-primary btn-affiliate" data-product-id="YF003" data-product-name="YogaFlex Premium" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="equipment" data-price="179.99" data-rating="4.6" data-date="2025-02-20">
+                                <img src="https://via.placeholder.com/300x200?text=AdjustDumbbells" class="card-img-top product-img" alt="Haltères Ajustables Pro">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-info">Nouveau</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.6/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Haltères Ajustables Pro</h5>
+                                    <p class="card-text">Paire d'haltères ajustables de 2 à 24 kg avec système de réglage rapide et support inclus.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">179,99 €</span>
+                                        <a href="https://example.com/affiliate/adjustdumbbells" class="btn btn-primary btn-affiliate" data-product-id="AD004" data-product-name="Haltères Ajustables Pro" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="accessories" data-price="49.99" data-rating="4.5" data-date="2025-01-25">
+                                <img src="https://via.placeholder.com/300x200?text=FitnessMat" class="card-img-top product-img" alt="Tapis de Fitness Premium">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-secondary">Populaire</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">4.5/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Tapis de Fitness Premium</h5>
+                                    <p class="card-text">Tapis d'exercice épais et antidérapant pour yoga, pilates et fitness à domicile.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">49,99 €</span>
+                                        <a href="https://example.com/affiliate/fitnessmat" class="btn btn-primary btn-affiliate" data-product-id="FM005" data-product-name="Tapis de Fitness Premium" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Produit 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="product-card" data-category="programs" data-price="149.00" data-rating="4.9" data-date="2025-02-28">
+                                <img src="https://via.placeholder.com/300x200?text=HIIT30" class="card-img-top product-img" alt="HIIT30 Challenge">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-warning text-dark">Offre limitée</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="ms-1">4.9/5</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">HIIT30 Challenge</h5>
+                                    <p class="card-text">Programme intensif de 30 jours avec entraînements HIIT de 30 minutes et suivi nutritionnel.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="product-price">149,00 €</span>
+                                        <a href="https://example.com/affiliate/hiit30" class="btn btn-primary btn-affiliate" data-product-id="HT006" data-product-name="HIIT30 Challenge" data-affiliate="SNP001" target="_blank">Voir l'offre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Pagination des produits">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Suivant">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section d'information -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Pourquoi choisir le fitness à domicile ?</h2>
+                    <p class="lead">Le fitness à domicile offre flexibilité, économies et confort, tout en vous permettant d'atteindre vos objectifs de forme physique sans contraintes.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Gain de temps</h4>
+                        <p>Fini les trajets vers la salle de sport ! Économisez du temps précieux en vous entraînant directement chez vous, quand vous le souhaitez.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <h4>Économies</h4>
+                        <p>Un investissement initial dans du bon équipement ou des programmes de qualité vous fera économiser des centaines d'euros d'abonnements annuels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box bg-white text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h4>Intimité</h4>
+                        <p>Entraînez-vous sans le regard des autres, à votre rythme et selon votre niveau, pour une expérience plus confortable et moins intimidante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section témoignages -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Témoignages de nos lecteurs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Marc D.">
+                            <div>
+                                <h5 class="mb-0">Marc D.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Le programme HomeFit Revolution a complètement transformé ma routine d'exercice. En 3 mois, j'ai gagné en muscle et perdu 8kg de graisse. Les séances sont variées et adaptées à mon emploi du temps chargé."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Julie M.">
+                            <div>
+                                <h5 class="mb-0">Julie M.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Les PowerBands Pro sont incroyables ! Je les utilise quotidiennement et j'obtiens des résultats comparables à ceux d'une salle de sport. La qualité est exceptionnelle et le guide d'exercices très complet."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/80x80" class="testimonial-img" alt="Pierre L.">
+                            <div>
+                                <h5 class="mb-0">Pierre L.</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Le HIIT30 Challenge est le programme le plus efficace que j'ai essayé. Les séances de 30 minutes sont intenses mais parfaitement structurées. J'ai perdu 6kg et gagné en endurance en seulement un mois !"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Questions fréquentes sur le fitness à domicile</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Quel équipement minimum est nécessaire pour commencer le fitness à domicile ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Pour débuter le fitness à domicile, vous n'avez besoin que de très peu d'équipement. Un tapis d'exercice confortable et antidérapant est l'élément essentiel. Ajoutez à cela quelques bandes de résistance ou des haltères légers, et vous pourrez déjà réaliser une grande variété d'exercices. Si votre budget le permet, un kettlebell et une corde à sauter sont d'excellents compléments. L'important est de commencer avec du matériel polyvalent qui vous permettra de travailler différents groupes musculaires.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Comment rester motivé pour s'entraîner régulièrement à la maison ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Maintenir sa motivation pour l'entraînement à domicile peut être un défi. Voici quelques stratégies efficaces : créez un espace dédié à l'exercice dans votre maison, établissez un calendrier d'entraînement fixe comme un rendez-vous important, variez vos routines pour éviter l'ennui, fixez-vous des objectifs mesurables à court et long terme, suivez vos progrès (applications, journal d'entraînement), rejoignez des communautés en ligne pour partager vos expériences, et récompensez-vous après avoir atteint certains jalons. Les programmes structurés comme ceux que nous recommandons incluent souvent des éléments de motivation intégrés.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Les entraînements à domicile sont-ils aussi efficaces que ceux en salle de sport ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolument ! L'efficacité d'un entraînement dépend principalement de son intensité, de sa régularité et de sa progression, pas du lieu où il est réalisé. Avec les bons programmes et un équipement adapté, les entraînements à domicile peuvent être tout aussi efficaces que ceux en salle. Les méthodes comme le HIIT, les exercices au poids du corps, ou l'entraînement avec bandes de résistance permettent d'obtenir d'excellents résultats sans machines sophistiquées. L'avantage du fitness à domicile est la constance : sans contraintes de déplacement ou d'horaires, vous êtes plus susceptible de vous entraîner régulièrement, ce qui est le facteur clé pour obtenir des résultats.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Comment éviter les blessures lors des entraînements à domicile ?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Pour éviter les blessures pendant vos séances à domicile, suivez ces précautions essentielles : commencez toujours par un échauffement adéquat (5-10 minutes), apprenez la technique correcte avant d'augmenter l'intensité (les programmes vidéo de qualité montrent les bonnes postures), progressez graduellement en intensité et en durée, écoutez votre corps et respectez ses limites, utilisez un équipement de qualité et sécurisé, assurez-vous d'avoir suffisamment d'espace pour bouger librement, et n'oubliez pas de vous hydrater correctement. Si vous débutez ou reprenez après une longue pause, consultez un professionnel de santé, surtout si vous avez des antécédents médicaux.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section CTA -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">Prêt à transformer votre domicile en salle de sport personnelle ?</h2>
+            <p class="lead mb-4">Rejoignez des milliers de personnes qui ont amélioré leur condition physique sans quitter leur maison.</p>
+            <a href="#" class="btn btn-light btn-lg">Découvrir nos meilleures offres</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Santé Naturelle Plus</h5>
+                    <p>Votre guide de confiance pour une vie saine et naturelle. Nous vous aidons à faire les meilleurs choix pour votre santé et votre bien-être.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Catégories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="perte-de-poids.html">Perte de Poids</a></li>
+                        <li><a href="fitness.html">Fitness à Domicile</a></li>
+                        <li><a href="bien-etre-mental.html">Bien-être Mental</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="a-propos.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+                        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Recevez nos conseils et recommandations directement dans votre boîte mail.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email" required>
+                            <button class="btn btn-primary" type="submit">S'abonner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Santé Naturelle Plus. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Popup Newsletter -->
+    <div class="popup-overlay" id="popup-newsletter">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h4 class="text-center mb-4">Obtenez notre guide gratuit</h4>
+            <p class="text-center">Inscrivez-vous à notre newsletter et recevez gratuitement notre guide "Les 15 Exercices Essentiels à Faire Chez Soi".</p>
+            <form id="popup-newsletter-form">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Votre email" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Recevoir mon guide gratuit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

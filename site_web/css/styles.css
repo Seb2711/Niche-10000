@@ -1,0 +1,682 @@
+/* Styles personnalisés pour Santé Naturelle Plus */
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #8BC34A;
+    --text-color: #333333;
+    --light-bg: #F5F5F5;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.feature-box {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: var(--white);
+    padding: 50px 0;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+.newsletter-form {
+    position: relative;
+}
+
+.newsletter-form input {
+    padding-right: 50px;
+    border-radius: 30px;
+}
+
+.newsletter-form button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 30px;
+}
+
+.category-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.rating {
+    color: #FFD700;
+}
+
+.blog-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Styles pour les pages de produits */
+.product-detail-img {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.product-old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.product-discount {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.product-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.product-features li:before {
+    content: "✓";
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Styles pour les pages de blog */
+.blog-detail-img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.blog-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.blog-content ul, .blog-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.blog-content li {
+    margin-bottom: 10px;
+}
+
+.blog-content blockquote {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+}
+
+.blog-author-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.blog-tags {
+    margin: 30px 0;
+}
+
+.blog-tag {
+    display: inline-block;
+    background-color: #eee;
+    padding: 5px 15px;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.blog-tag:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+/* Styles pour la page À propos */
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px;
+    background-color: #e9ecef;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 100;
+}
+
+.timeline-panel {
+    position: relative;
+    width: 46%;
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.timeline-panel:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 15px solid white;
+    border-bottom: 15px solid transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-panel {
+    float: right;
+}
+
+.timeline-item:nth-child(even) .timeline-panel:before {
+    left: -15px;
+    right: auto;
+    border-left: 0;
+    border-right: 15px solid white;
+}
+
+/* Styles pour les pages de catégories */
+.category-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/category-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter-sidebar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.filter-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-checkbox {
+    margin-bottom: 10px;
+}
+
+.price-slider {
+    margin: 20px 0;
+}
+
+.sort-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+/* Styles pour les pages de FAQ */
+.accordion-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+    font-weight: 600;
+    padding: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-body {
+    padding: 20px;
+}
+
+/* Styles pour les pages légales */
+.legal-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.legal-content p {
+    margin-bottom: 20px;
+}
+
+.legal-content ul, .legal-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.legal-content li {
+    margin-bottom: 10px;
+}
+
+/* Styles pour les popups et modals */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-50px);
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Styles pour les notifications */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.notification.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Styles pour les animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour les médias responsifs */
+@media (max-width: 992px) {
+    .timeline:before {
+        left: 60px;
+    }
+    
+    .timeline-badge {
+        left: 60px;
+    }
+    
+    .timeline-panel {
+        width: calc(100% - 120px);
+        float: right;
+    }
+    
+    .timeline-panel:before {
+        left: -15px;
+        right: auto;
+        border-left: 0;
+        border-right: 15px solid white;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-section {
+        padding: 50px 0;
+    }
+    
+    .feature-box, .testimonial-card, .blog-card, .product-card, .category-card {
+        margin-bottom: 20px;
+    }
+    
+    .footer {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .blog-author-img {
+        width: 80px;
+        height: 80px;
+    }
+}
